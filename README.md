@@ -25,6 +25,16 @@ Once that's done, you can import it from within your main file (default `index.j
 const stdlib = require('@grakkit/server');
 ```
 
+You can also create HTTP servers! this i easily done through https://github.com/Simonwep/java-express. IF you want more docs please go there, i might add more docs later here.
+```js
+const server = require('@grakkit/server');
+const express = server.type('express.Express');
+const app = new express()
+app.get("/", (req, res) => res.send('Wow! Such nice!'))
+app.listen(2023)
+```
+**Note: **Using core.reload() will make it load on the same port, so you will need to change port everytime you reload. This is a known issue and i will work on resolving it. 
+
 ...and upon the next server reload, the above code will be executed. This package also adds the in-game `/js` command, which can be used to test and execute code from within the game -- for example, `/js self` represents the player or console sending the command, and you can use `/js core.reload()` to reload the JS environment without having to reload the entire server.
 
 ## Your First Project (Fabric)
