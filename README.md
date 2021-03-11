@@ -25,7 +25,7 @@ Once that's done, you can import it from within your main file (default `index.j
 const stdlib = require('@grakkit/server');
 ```
 
-You can also create HTTP servers! this i easily done through https://github.com/Simonwep/java-express. IF you want more docs please go there, i might add more docs later here.
+You can also create HTTP servers! this is easily done through https://github.com/Simonwep/java-express. If you want more docs please go there, i might add more docs later here.
 ```js
 const server = require('@grakkit/server');
 const express = server.type('express.Express');
